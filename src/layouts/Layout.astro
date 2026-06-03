@@ -1,0 +1,20 @@
+---
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | UMKM Premium Directory</title>
+    <meta name="description" content="Direktori premium UMKM lokal - temukan dan dukung usaha mikro, kecil, dan menengah di area Anda" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 antialiased">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <slot />
+    </div>
+  </body>
+</html>

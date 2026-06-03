@@ -1,0 +1,61 @@
+<footer class="bg-gray-900 text-gray-300">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-8 pt-16 pb-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <h3 class="text-xl font-semibold text-white mb-4">
+          UMKM<span class="text-green-600">Dir</span>
+        </h3>
+        <p class="text-sm">Direktori premium UMKM lokal yang menghubungkan konsumen dengan usaha mikro, kecil, dan menengah terpercaya di area Anda.</p>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">Produk</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="hover:text-white transition-colors">Beranda</a></li>
+          <li><a href="/kategori" class="hover:text-white transition-colors">Kategori</a></li>
+          <li><a href="/daftar" class="hover:text-white transition-colors">Daftar Bisnis</a></li>
+          <li><a href="/bantuan" class="hover:text-white transition-colors">Bantuan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">Bisnis</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/masuk" class="hover:text-white transition-colors">Masuk sebagai Pengusaha</a></li>
+          <li><a href="/bisnis/tambah" class="hover:text-white transition-colors">Tambah Bisnis Baru</a></li>
+          <li><a href="/bisnis/kelola" class="hover:text-white transition-colors">Kelola Bisnis Anda</a></li>
+          <li><a href="/bisnis/panduan" class="hover:text-white transition-colors">Panduan untuk UMKM</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">Ikuti Kami</h4>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-white transition-colors">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675s-4.128-11.675-11.675-11.675-11.675 4.128-11.675 11.675 4.128 11.675 11.675 11.675zm5.135-7.62l-1.132-.252a3.715 3.715 0 10-3.045 5.08l1.132.252a3.715 3.715 0 003.045-5.08zM12 2.25c-5.386 0-9.75 4.364-9.75 9.75s4.364 9.75 9.75 9.75 9.75-4.364 9.75-9.75-4.364-9.75-9.75-9.75z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#" class="hover:text-white transition-colors">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M22.05 7.54a4.47 4.47 0 00-3.134-1.539 12.31 12.31 0 01-2.229.83 4.47 4.47 0 00-6.26 2.16A12.09 12.09 0 017 5.63a4.47 4.47 0 00-1.278 2.246 6.11 6.11 0 012.658.203 4.47 4.47 0 00-1.104-1.873c.46-.797.624-1.707.434-2.589a12.1 12.1 0 014.037-1.75 4.47 4.47 0 002.15.595 6.21 6.21 0 011.524-2.943c.55-1.272.227-2.608-.889-3.216a12.09 12.09 0 01-3.36 1.132c-.34.794-.51 1.716-.411 2.65.048.413.104.81.157 1.19.116.077.235.113.355.113.123 0 .243-.01.36-.036a12.08 12.08 0 01-3.18 3.836 4.44 4.44 0 001.194 2.028 4.45 4.45 0 01-1.33-.966 2.17 2.17 0 00.612-.789c0-.21.008-.42.015-.63z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#" class="hover:text-white transition-colors">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675s-4.128-11.675-11.675-11.675-11.675 4.128-11.675 11.675 4.128 11.675 11.675 11.675zm7.733-8.076l3.708-2.537a1 1 0 00.43-1.336l-2.642-3.054a1 1 0 00-1.476.02l-1.084 3.75a1 1 0 001.084 1.276l3.069-.384zM9.81 13.54l-3.708 2.537a1 1 0 01-.43 1.336l2.642 3.054a1 1 0 011.476-.02l1.084-3.75a1 1 0 01-1.084-1.276l-3.069.384z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-10">
+      <div class="flex flex-col items-center">
+        <p class="text-xs text-gray-500">
+          &copy; <span id="year"></span> UMKM Directory. Semua hak dilindungi.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>

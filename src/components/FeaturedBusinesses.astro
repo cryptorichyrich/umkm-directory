@@ -1,0 +1,68 @@
+---
+export const props = {
+  /**
+   * Featured businesses section props
+   */
+  title?: string;
+  subtitle?: string;
+  businesses: Array<{
+    id: string;
+    name: string;
+    category: string;
+    rating: number;
+    reviewCount: number;
+    image: string;
+    description: string;
+    isVerified: boolean;
+  }>;
+};
+---
+<section class="py-16 bg-gray-50">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        {props.title ?? "Bisnis UMKM Unggulan"}
+      </h2>
+      {props.subtitle && <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">{props.subtitle}</p>}
+    </div>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {props.businesses.map((business) => (
+        <div key={business.id} class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+          <div class="p-6">
+            {business.isVerified && (
+              <div class="flex items-center space-x-2 mb-3">
+                <svg class="h-4 w-4 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" d="M2.25 12c0-5.386 4.364-9.75 9.75-9.75s9.75 4.364 9.75 9.75-4.364 9.75-9.75 9.75S2.25 17.386 2.25 12z" clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-xs font-medium text-green-600">Terverifikasi</span>
+              </div>
+            )}
+            <div class="flex items-start">
+              <div class="w-16 h-16 flex-shrink-0">
+                <img src={business.image} alt={business.name} class="rounded-lg object-cover" />
+              </div>
+              <div class="ml-4 flex-1">
+                <h3 class="font-semibold text-gray-900 line-clamp-2">{business.name}</h3>
+                <p class="mt-1 text-sm text-gray-500 line-clamp-1">{business.category}</p>
+                <div class="mt-2 flex items-center text-sm">
+                  <svg class="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M9.705 15.033a3 3 0 10-4.29 4.29l1.27-3.221a3 3 0 10-4.292-4.292l3.222-1.27A3 3 0 005.416 9.75l3.293.318a3 3 0 104.053-4.06l1.086-2.732a3 3 0 10-4.245-4.245l-2.732 1.086a3 3 0 00-4.06 4.053l.318 3.293z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-1 font-medium">{business.rating}</span>
+                  <span class="ml-2 text-gray-500">({business.reviewCount} ulasan)</span>
+                </div>
+                <p class="mt-3 text-gray-600 line-clamp-2">{business.description}</p>
+                <div class="mt-4">
+                  <a href={`/bisnis/${business.id}`} class="inline-flex items-center px-3 py-1 border border-transparent text-sm font-medium rounded-md text-green-600 bg-green-50 hover:bg-green-100 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    Lihat Detail
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+---
+export const props = {
+  /**
+   * Categories section props
+   */
+  title?: string;
+  subtitle?: string;
+};
+---
+<section class="py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        {props.title ?? "Jelajahi Kategori UMKM"}
+      </h2>
+      {props.subtitle && <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">{props.subtitle}</p>}
+    </div>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {/* Sample categories - in a real app, this would come from data */}
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
+              <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M2.25 12c0-5.386 4.364-9.75 9.75-9.75s9.75 4.364 9.75 9.75-4.364 9.75-9.75 9.75S2.25 17.386 2.25 12z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Kuliner</h3>
+              <p class="text-sm text-gray-500">Warung, Restoran, Kafe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
+              <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Fashion</h3>
+              <p class="text-sm text-gray-500">Pakaian, Aksesoris, Sepatu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
+              <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h12a3 3 0 010 6H6a3 3 0 01-3-3z" clip-rule="evenodd" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Kreatif</h3>
+              <p class="text-sm text-gray-500">Kerajinan, Desain, Layanan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
+              <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M12 2.25c-5.386 0-9.75 4.364-9.75 9.75s4.364 9.75 9.75 9.75 9.75-4.364 9.75-9.75S17.386 2.25 12 2.25z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Pertanian</h3>
+              <p class="text-sm text-gray-500">Tani, Peternakan, Perikanan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
